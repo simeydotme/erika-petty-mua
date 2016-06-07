@@ -1,0 +1,71 @@
+
+{{! This is the post loop - each post will be output using this markup }}
+
+
+{{#foreach posts}}
+{{^has tag="unlooped"}}
+{{^has tag="photos"}}
+
+<article class="loop-post // {{ post_class }}">
+
+    <header class="loop-post__header">
+
+        <h3 class="loop-post__title // txt-h-open / txt+3 / txt-thin / mar0">
+
+            <a class="loop-post__title-link" href="{{url}}" tabindex="2" title="{{excerpt words="10"}}...">
+
+                {{title}}
+
+                {{#if featured}}
+                    <em class="hidden">this is a featured Article.</em>
+                {{/if}}
+
+            </a>
+
+        </h3>
+
+        <time 
+            class="loop-post__date // txt-code / txt-light / cursor-normal" 
+            datetime="{{ date format='YYYY-MM-DD' }}">
+
+            {{ date format="Do MMMM YYYY" }}
+
+        </time>
+
+        {{#if featured}}
+            <div class="loop-post__stars">
+
+                <span class="loop-post__star" title="Featured Post!" role="presentation">
+                    {{> svgicon iconname="star"}}
+                </span>
+
+                <span class="loop-post__star loop-post__star--filled" title="Featured Post!" role="presentation">
+                    {{> svgicon iconname="star"}}
+                </span>
+
+            </div>
+        {{/if}}
+
+    </header>
+    
+    <div class="loop-post__content // hidden">
+
+        {{excerpt words="18"}}
+
+    </div>
+
+    <footer class="loop-post__footer // hidden">
+        {{#author}}
+        Written by <a href="{{url}}" tabindex="-1">{{name}}</a>, {{tags prefix="tagged: "}}
+        {{/author}}
+    </footer>
+
+</article>
+
+
+{{/has}}
+{{/has}}
+{{/foreach}}
+
+{{! Previous/next page links - displayed on every page }}
+{{pagination}}

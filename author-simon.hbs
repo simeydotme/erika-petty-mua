@@ -1,0 +1,47 @@
+{{!< default}}
+
+{{#author}}
+
+    {{#if cover}}
+
+        <img src="{{cover}}" alt="{{name}}'s cover photo">
+
+    {{/if}}
+
+    <section class="profile // clear">
+
+        {{#if image}}
+            <figure class="profile-image // float-l / one-third">
+                <img class="img" src="{{image}}" alt="{{name}}'s profile photo">
+                <span class="hidden">{{name}}'s Picture</span>
+            </figure>
+        {{/if}}
+
+        <div class="profile-info // float-l {{#if image}}/ pad-l2 / two-thirds{{/if}}">
+
+            <h2 class="profile-name // txt-h-open / txt-thin / clr-simey">
+                Simon Goellner
+            </h2>
+
+        </div>
+
+    </section>
+
+{{/author}}
+
+{{! The main content area on the homepage }}
+<main class="lg-txt+2 sm-txt+1 / txt-light / lh+1" role="main">
+
+    <hr class="hr--line">
+
+    <h3 class="lg-txt+3 sm-txt+2 / txt-book">I'm just a dude who enjoys making the web better.</h3>
+
+    <p>
+        <strong>But seriously</strong>; 
+        I'm a frontend developer. 
+        I stay up freakin&lsquo; late, 
+        get <strong class="txt-bold">crazy about user interactions</strong>, 
+        and <strong class="txt-bold">learn new shit every day</strong>.
+    </p>
+
+</main>

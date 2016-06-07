@@ -1,0 +1,34 @@
+
+<nav class="nav // txt-r / sm-pad-h0 / sm-pad-v3" role="navigation">
+
+
+    <h3 class="hidden">Navigation</h3>
+
+    <ul class="no-list / pad0 // lg-mar-t0 / lg-txt-black // sm-txt+3">
+
+        {{#foreach navigation}}
+            <li 
+                class="nav__item nav__item-{{slug}}{{#if current}} / nav__item-current{{/if}}" 
+                role="presentation">
+
+                <a class="nav__link // sm-pad-v2 / sm-pad-h3 / sm-disp-b" href="{{url absolute="true"}}" tabindex="1">
+
+                    {{label}}
+
+                </a>
+
+            </li>
+        {{/foreach}}
+
+    </ul>
+
+    <a 
+        class="nav__subscribe // button / disp-ib / pad-h2 / pad-v1 // sm-mar-r3 / sm-hidden" 
+        href="{{@blog.url}}/rss/">
+        
+        Subscribe
+
+    </a>
+
+</nav>
+

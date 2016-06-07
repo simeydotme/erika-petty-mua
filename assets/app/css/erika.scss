@@ -1,0 +1,68 @@
+body {
+
+    background: white;
+    color: #111;
+
+}
+
+h1 {
+
+    background-image: url( "/assets/dist/img/erika-petty-mua.png" );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    width: 510px;
+    max-width: 90%;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate( -50%, -75% );
+
+}
+
+h1 span {
+
+    text-indent: -9999em;
+    display: block;
+
+}
+
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+
+.social {
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX( -50% );
+    margin-top: 10%;
+    width: 100%;
+    text-align: center;
+}
+
+.social__item {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+

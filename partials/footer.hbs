@@ -1,0 +1,57 @@
+
+<footer class="footer // pad-t3 / pad-b3">
+
+    <aside class="wrap / clear / pos-r">
+
+    {{#is "post"}}
+    {{#post}}
+
+            {{#prev_post}}
+            
+                <a href="{{url}}" 
+                    title="Previous Post" 
+                    class="footer__prev // lg-float-l / lg-fifty / lg-txt-l / sm-txt-c / sm-disp-b">
+
+                    <span class="clr-simey">
+                        {{> svgicon iconname="arrow-left"}} 
+                        <h2 class="txt-h-open / disp-ib / txt-light / txt+3">{{title}}</h2>
+                    </span>
+
+                </a>
+
+            {{/prev_post}}
+
+            <hr class="hr--line // lg-disp-n">
+
+            {{#next_post}}
+            
+                <a href="{{url}}" 
+                    title="Next Post" 
+                    class="footer__next // lg-float-r / lg-fifty / lg-txt-r / sm-txt-c / sm-disp-b">
+
+                    <span class="clr-simey">
+                        <h2 class="txt-h-open / disp-ib / txt-light / txt+3">{{title}}</h2>
+                        {{> svgicon iconname="arrow-right"}}
+                    </span>
+
+                </a>
+
+            {{/next_post}}
+
+
+    {{/post}}
+    {{/is}}
+
+    {{#is "author"}}
+    {{#author}}
+        {{#if location}}
+            <span class="profile-location // txt+1 / lg-txt+2">
+                Currently based in {{location}}
+            </span>
+        {{/if}}
+    {{/author}}
+    {{/is}}
+
+    </aside>
+
+</footer>

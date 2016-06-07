@@ -1,0 +1,47 @@
+
+<footer class="blog-post__footer // clear / sm-txt-c / mar-t5">
+
+    <section class="blog-post__meta // txt-code">
+
+        <span class="blog-post__tags // txt-lower ">
+            {{tags prefix="Posted in: " separator=", " suffix=""}}
+        </span>
+
+    </section>
+
+
+
+    {{! Everything inside the #author tags pulls data from the author }}
+
+    {{#author}}
+
+        {{#if bio}}
+            
+        {{else}}
+            
+        {{/if}}
+
+        {{#if image}}
+        
+        {{/if}}
+
+    {{/author}}
+
+
+
+    <section class="share // txt-black / mar-t3">
+
+        <a 
+            class="share__twitter // clr-blue"
+            href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            
+            {{> svgicon iconname="twitter"}} Tweet this shit!
+
+        </a>
+
+    </section>
+
+
+
+</footer>
