@@ -1,0 +1,82 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+
+
+{{#if @blog.cover}} 
+
+    {{! Don't need a cover. yet. }}
+
+{{/if}}
+
+
+{{#if @blog.logo}}
+    
+    {{! Dont need blog logo/url yet }}
+
+    {{! @blog.url}}
+    {{! @blog.logo}}
+    {{! @blog.title}}
+
+{{/if}}
+
+<div class="hidden">
+    <h2 class="page-title">{{@blog.title}}</h2>
+    <h3 class="page-description">{{@blog.description}}</h3>
+</div>
+
+
+
+{{! The main content area on the homepage }}
+
+<main id="content" class="clear" role="main">
+
+
+{{#if posts}}
+
+    <section class="nav-wrapper // divided-section / pos-r / lg-pad3 / lg-thirty / lg-float-l">
+
+        {{#if @blog.navigation}}
+        {{navigation}}
+        {{/if}}
+
+    </section>
+
+
+    <a href="#" class="nav__expand // button / pos-f / txt+3 // lg-disp-n // sm-disp-b">
+        <span class="nav__menu">
+            {{> svgicon iconname="menu"}}
+        </span>
+        <span class="nav__cross">
+            {{> svgicon iconname="cross"}}
+        </span>
+    </a>
+
+
+
+    <section class="divided-section / pos-r / pad3 / lg-seventy / lg-float-l">
+
+        <h2 class="hidden">Posts</h2>
+
+        {{! The tag below includes the post loop - partials/loop.hbs }}
+        {{> "loop"}}
+
+    </section>
+
+{{else}}
+
+
+    <h2 class="txt-h-lato / txt+4 / clr-simey / txt-black / mar-b0 / txt-c">
+    Soon
+    </h2>
+
+    <p class="txt+1 / mar-t0 / txt-c">
+        Promise.
+    </p>
+
+
+{{/if}}
+
+
+</main>
